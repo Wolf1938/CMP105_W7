@@ -6,7 +6,6 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	input = in;
 
 	// initialise game objects
-	
 }
 
 Level::~Level()
@@ -23,7 +22,7 @@ void Level::handleInput(float dt)
 // Update game objects
 void Level::update(float dt)
 {
-	for(int i = 0; i <= 6; i++)
+	for(int i = 0; i < 6; i++)
 		bits[i].update(dt);
 }
 
@@ -31,7 +30,7 @@ void Level::update(float dt)
 void Level::render()
 {
 	beginDraw();
-	for (int i = 0; i <= sizeof(bits)/sizeof(bits[0]); i++)
+	for (int i = 0; i < 6; i++)
 		window->draw(bits[i]);
 	endDraw();
 }

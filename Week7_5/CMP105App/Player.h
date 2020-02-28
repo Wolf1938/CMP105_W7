@@ -11,11 +11,10 @@ public:
 
 	void handleInput(float dt);
 	void update(float dt);
-	Companion* getCompanion()
-	{
+	Companion* getCompanion() {
 		return &companion;
 	};
 
-private:
+protected:
 	Companion companion;
 };

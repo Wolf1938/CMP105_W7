@@ -4,7 +4,7 @@
 #define MAX 550
 
 Bit::Bit()
-{
+{ 
 	setPosition(rand() % 600, rand() % 400);
 	setSize(sf::Vector2f(25, 25));
 	setVelocity(0, rand() % 500);
@@ -19,7 +19,7 @@ Bit::~Bit()
 
 void Bit::update(float dt)
 {
-	move(velocity*dt);
+	move(velocity * dt);
 	if (getPosition().y > MAX)
 	{
 		velocity = -velocity;
